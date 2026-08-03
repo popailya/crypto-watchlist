@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場監控台</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuW4guWgtOebo+aOp+WPsCIsICJzaG9ydF9uYW1lIjogIuW4guWgtOebo+aOp+WPsCIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMEIwRDBGIiwgInRoZW1lX2NvbG9yIjogIiMwQjBEMEYiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FJQUFBRGR2dnRRQUFBRDNVbEVRVlI0bk8zZHNXNGNSUURINFptOXN4MWtZZ2RDQjZLaWhDSTlGRWpVOEFqMGxQQUFTRHhDbmlKUFFNTXpJQ3FJRU5CWVFpSUJRUkhKanU5MmQralMyVnp1Zjl6bDlyNnZ2OW5adTkvZTJQS3VwNTdlUFMrd3JtN1hFMkMvQ1lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlNaDgxeE5nSGN1K2pTMGQ1SGhlYTAwSEVkRCtHVnQ1OE43eHZkZTdGalRVV3ZuaHQ4WGw4eFkySktEOTB3L3RtOC9QUG5udzJ2Vnl6WUpxTGYxUVB2enl5ZU9MNWRFc0traEFlNmtmeXFKdml6NEtLUGtDZThFUDBVUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVpKcVA5WXhqeVI5Wm1ibTRWakROZ001TzY5RzhKaEcxVXA1ZGpzTzR1VGxOMUFRRFd2VHQ0UmR2ZnZUK3lYWHczTjB3bEUrLy91dVgzOU1ITnlkdmdnR1ZVczVPNjF2blhmamtyeVZzRmRNTWFCekxNSmExRjZCYTEzL3RvWEdWRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFSkZwM3RLNlpXMXM3Ym9QQjZtenJoN1BOaktmYlJKUXFnM2puWGZmdVAvWkI4a2VnblhlWGY3NHh6L2YvVnpuZTdZbUNDalZodkhrblh0dmYvVnhXdzVyRDlMZE9YcjY2UHUvdi8xSlFJZW9qVzI4V2lZQmxWYmFJbmo1N3V4Wjc3eHFCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJMYnh0N0JEdnR0aDh2NzNnQTc4Ym9mSjIwWkFoM3kzdytSdGFRazcyTHNkSnM4RlRVUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUmtHLytwdnRSYTU3UFNrcjB5Wm5YMkVxM1BaK1ZvWHNkeDNjTjFwWlpTNitvdm1Qb0ozaktURFl4eHUxckhxOFhWcjM5R2UyV2N6QmRQbnExNHhyV1dpNmZENDR2bFlybm1KMXByNmNleVdMWVZqemZ4RTd4OXFOTzc1L0VnLzNtUVVydDByV3l0bFpYMysrbTZrcjgxdytyWDkrUlA4R1piV2NKYWFYMitWVXBkL1QwYk5yRXh5MHQ4dzAvK0JHKzJsWURLaGliN2loNXRCNGZjd1FuZXdHOWhSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUlA0RmVpMzdIR05qbFlJQUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFIY1VsRVFWUjRuTzNYTVcyQ0FSaEYwZEt3RWNJT0tzQU5RbENCRU55QUN0RFJzZnVmTkIvMG5xUGdiVGR2dGRudXZnRG8rWjRlQU1BTUFRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBcVBYMEFJQmZ6OXQrZXNJU2gvTnJlc0lTSGdCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRTlI2ZWdDZjZubmJUMDlZNG5CK1RVK0FkK0VCQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSSzJuQjhEL2QzcGNwaWNzY1Q5ZXB5Znd0endBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUNvOWZTQTkzSjZYS1luTEhFL1hxY25BSi9IQXdDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQ28xV2E3bTk0QXdBQVBBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSitBS0o5RUZYV00zQUZBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmcifV19">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEaklEQVR4nO3dv48bRRiH8fed3T37Yi4nRSISKLShSINoI1HQUqVD4h+goqFOmxZRQktDQZGO/wAkRIVOoiRKA0hcdDi584/dnZeCgoavtJ6Nzz7r+dRnz9p+vLs6jWd8dnJqwP9Juz4A7C/igEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckOpdHwCkVRsR5Q+vK6+rUQdAHHvK3T58bzqbei7qo0r22x/dr8+7asS1wdk1YQ9F2FHtP3x59917TduX1DGZ+BffzT//6u9bEy8+DM4c+2vVxnIdZXEkt64fewDckEIiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHpAOZfZ7D1u2IHwCZHTWeyifxH6ZDiKPr4/695vEntyOsLJA6+ZNv52fP1k1FIP85hDhytjtvpEcPj3MujKOp/evvX+VsNu73gwfmEOIwsxy2XEdxHH22nF/zIR0AbkghEQck4oBEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIAxJxQCIOSMQBiTggHchMsOsTkVdd4YQzMzPzpvL6ZnwniWMDkaM+nb7z6UOf1lY0rdCPqvOnv7z86bk3N2C2KnFsIiIdN29+/H46mVjRVhfpuLk6+33+4zPiOERhedlancriMLPob8xU5ptx8cNOEAck4oBEHJCIAxJxQCIOSMQBiTggEQek7f77PPocq95GrJaTprU5q+3sxhbjiK6fPXjrzkcPomxvZPfo+j+/+bm7WLBc105sNY58fP/u2599kJdtyeOT52X719Oz7sWVEccubP2ykhftmDgsRq0RiDG4IYVEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIAxJxQCIOSMQBacsbALp75YVLzG7yQDerkrkVbvhapQ2WSfbkXhWui+qVDx8pJatKNxqs0mtYu3WbcbjFumtfLGI1Yh3SYe9Nl+18nnMujKOpve2G/WlEd7FIXS770HzZxaobuN73xat8Ps9tXzLQ1cQvVzEyD5+dnI57Bi3MJ1U1Oxqzf3M3Xw75GOrKbt8adYmcX0XbD3g3k9cn0/LV3N3yZZuH9XE6S1Xpa3K3xSoulzFm4fhtxmFmEVG6/6qZmQ09gYdZHrddaxp8vo8+Si9fZmY+eKSRG9C6j72yXMc9x3aH+Hccs+Iv2cZjVW5jNoIY7NpekbLr8bHHiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAekfeV39SmwQbFsAAAAASUVORK5CYII=">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="市場監控台">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0B0D0F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0D0F;
+    --panel:#14171A;
+    --panel-2:#191D21;
+    --line:#262B30;
+    --text:#E8EAED;
+    --text-dim:#8B9299;
+    --text-faint:#5A6169;
+    --up:#3DDC84;
+    --down:#FF5C5C;
+    --amber:#F0B429;
+    --amber-dim:#5C4A16;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'JetBrains Mono', monospace;
+    min-height:100vh;
+    padding-bottom:60px;
+  }
+  .display{font-family:'Space Grotesk', sans-serif;}
+
+  /* Header */
+  header{
+    padding:20px 24px 16px;
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:20;
+    background:rgba(11,13,15,0.92);
+    backdrop-filter:blur(8px);
+  }
+  .header-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;}
+  h1{font-size:20px; font-weight:700; letter-spacing:0.02em;}
+  .sub{color:var(--text-dim); font-size:12px; margin-top:4px;}
+  .status{text-align:right; font-size:11px; color:var(--text-faint);}
+  .status .dot{display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--up); margin-right:6px; box-shadow:0 0 6px var(--up);}
+  .refresh-btn{
+    background:var(--panel-2); border:1px solid var(--line); color:var(--text);
+    font-family:inherit; font-size:12px; padding:6px 14px; border-radius:4px;
+    cursor:pointer; margin-top:6px; transition:border-color .15s;
+  }
+  .refresh-btn:hover{border-color:var(--text-dim);}
+  .refresh-btn:disabled{opacity:0.4; cursor:default;}
+  .disclaimer{
+    margin-top:12px; font-size:11px; color:var(--text-faint);
+    border-left:2px solid var(--amber); padding:6px 10px; background:rgba(240,180,41,0.05);
+    line-height:1.6;
+  }
+
+  /* Ticker */
+  .ticker-wrap{
+    overflow:hidden; border-bottom:1px solid var(--line); background:var(--panel);
+    white-space:nowrap; padding:8px 0;
+  }
+  .ticker{display:inline-block; animation:scroll 40s linear infinite;}
+  .ticker span{display:inline-block; padding:0 20px; font-size:12px; border-right:1px solid var(--line);}
+  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* Controls */
+  .controls{
+    display:flex; gap:8px; padding:14px 24px; flex-wrap:wrap; align-items:center;
+  }
+  .filter-btn{
+    background:transparent; border:1px solid var(--line); color:var(--text-dim);
+    font-family:inherit; font-size:11px; padding:5px 12px; border-radius:20px; cursor:pointer;
+  }
+  .filter-btn.active{border-color:var(--amber); color:var(--amber); background:rgba(240,180,41,0.08);}
+  .legend{margin-left:auto; font-size:10px; color:var(--text-faint);}
+
+  /* Table */
+  .table-wrap{padding:0 24px; overflow-x:auto;}
+  table{width:100%; border-collapse:collapse; min-width:1020px;}
+  thead th{
+    text-align:left; font-size:10px; color:var(--text-faint); font-weight:500;
+    text-transform:uppercase; letter-spacing:0.05em; padding:10px 10px; border-bottom:1px solid var(--line);
+    cursor:pointer; user-select:none; white-space:nowrap;
+  }
+  thead th:hover{color:var(--text-dim);}
+  tbody tr{border-bottom:1px solid var(--line); transition:background .1s;}
+  tbody tr:hover{background:var(--panel);}
+  tbody td{padding:10px 10px; font-size:12px; vertical-align:middle; white-space:nowrap;}
+  .coin-cell{display:flex; align-items:center; gap:8px; font-weight:600;}
+  .coin-sym{font-family:'Space Grotesk',sans-serif; font-size:13px;}
+  .price{font-weight:600;}
+  .chg-up{color:var(--up);}
+  .chg-down{color:var(--down);}
+  .tf-badge{
+    display:inline-block; width:36px; text-align:center; padding:2px 0; border-radius:3px;
+    font-size:10px; font-weight:600;
+  }
+  .tf-up{background:rgba(61,220,132,0.12); color:var(--up);}
+  .tf-down{background:rgba(255,92,92,0.12); color:var(--down);}
+  .tf-flat{background:rgba(139,146,153,0.1); color:var(--text-dim);}
+  .tf-na{color:var(--text-faint);}
+  .rsi-val{font-weight:600;}
+  .rsi-hot{color:var(--down);}
+  .rsi-cold{color:var(--up);}
+  .score-bar-wrap{width:56px; height:5px; background:var(--panel-2); border-radius:3px; overflow:hidden; display:inline-block; vertical-align:middle; margin-right:6px;}
+  .score-bar{height:100%; background:var(--amber);}
+  .note{color:var(--text-dim); font-size:11px; max-width:260px; white-space:normal; line-height:1.5;}
+  .watch-flag{color:var(--amber); font-weight:700; font-size:10px;}
+  .spark{display:block;}
+  .skeleton{color:var(--text-faint);}
+  .err-row td{color:var(--text-faint); font-style:italic;}
+
+  footer{padding:20px 24px; font-size:10px; color:var(--text-faint); text-align:center;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div>
+      <h1 class="display">市場監控台 · 20 幣種篩選</h1>
+      <div class="sub">4H / 1H / 15M / 5M 已收盤K棒 · Binance 公開行情</div>
+    </div>
+    <div>
+      <div class="status"><span class="dot"></span><span id="statusText">初始化中...</span></div>
+      <button class="refresh-btn" id="refreshBtn" onclick="loadAll()">重新整理</button>
+    </div>
+  </div>
+  <div class="disclaimer">
+    僅整理客觀技術數據（趨勢方向、RSI、成交量、資金費率），用於縮小你要人工檢視的範圍。不輸出買賣訊號、不代表建議，最終判斷與下單決策一律由你自己做。
+  </div>
+</header>
+
+<div class="ticker-wrap">
+  <div class="ticker" id="tickerStrip">
+    <span>載入中...</span>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">全部 20</button>
+  <button class="filter-btn" data-filter="watch" onclick="setFilter('watch')">僅看「值得留意」</button>
+  <div class="legend">關注度 = 多時間框架趨勢一致 + RSI極端 + 量能異常 + 資金費率極端（越多條件觸發分數越高，非勝率）</div>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sortBy('symbol')">幣種</th>
+        <th onclick="sortBy('price')">現價</th>
+        <th onclick="sortBy('chg24h')">24h%</th>
+        <th>4H</th>
+        <th>1H</th>
+        <th>15M</th>
+        <th>5M</th>
+        <th onclick="sortBy('rsi1h')">RSI(1H)</th>
+        <th onclick="sortBy('volRatio')">量能(1H)</th>
+        <th onclick="sortBy('funding')">資金費率</th>
+        <th onclick="sortBy('score')">關注度</th>
+        <th>備註</th>
+        <th>圖表</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr><td colspan="12" class="skeleton">正在抓取市場資料...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>資料來源：Binance 公開 API（現貨行情 + 合約資金費率）。網路延遲或交易所端限制可能導致個別幣種讀取失敗，失敗會標示為 N/A。</footer>
+
+<script>
+const COINS = [
+  {sym:'BTC', spot:'BTCUSDT', perp:'BTCUSDT'},
+  {sym:'ETH', spot:'ETHUSDT', perp:'ETHUSDT'},
+  {sym:'SOL', spot:'SOLUSDT', perp:'SOLUSDT'},
+  {sym:'BNB', spot:'BNBUSDT', perp:'BNBUSDT'},
+  {sym:'XRP', spot:'XRPUSDT', perp:'XRPUSDT'},
+  {sym:'AVAX', spot:'AVAXUSDT', perp:'AVAXUSDT'},
+  {sym:'XAU', spot:'PAXGUSDT', perp:'PAXGUSDT'},
+  {sym:'SUI', spot:'SUIUSDT', perp:'SUIUSDT'},
+  {sym:'APT', spot:'APTUSDT', perp:'APTUSDT'},
+  {sym:'DOT', spot:'DOTUSDT', perp:'DOTUSDT'},
+  {sym:'NEAR', spot:'NEARUSDT', perp:'NEARUSDT'},
+  {sym:'ARB', spot:'ARBUSDT', perp:'ARBUSDT'},
+  {sym:'OP', spot:'OPUSDT', perp:'OPUSDT'},
+  {sym:'TRX', spot:'TRXUSDT', perp:'TRXUSDT'},
+  {sym:'ADA', spot:'ADAUSDT', perp:'ADAUSDT'},
+  {sym:'DOGE', spot:'DOGEUSDT', perp:'DOGEUSDT'},
+  {sym:'LINK', spot:'LINKUSDT', perp:'LINKUSDT'},
+  {sym:'LTC', spot:'LTCUSDT', perp:'LTCUSDT'},
+  {sym:'INJ', spot:'INJUSDT', perp:'INJUSDT'},
+  {sym:'PEPE', spot:'PEPEUSDT', perp:'1000PEPEUSDT'},
+];
+
+const INTERVALS = ['4h','1h','15m','5m'];
+let rows = {};
+let sortKey = 'score';
+let sortDir = -1;
+let filterMode = 'all';
+
+function ema(values, period){
+  const k = 2/(period+1);
+  let emaArr = [values[0]];
+  for(let i=1;i<values.length;i++){
+    emaArr.push(values[i]*k + emaArr[i-1]*(1-k));
+  }
+  return emaArr;
+}
+
+function rsi(values, period=14){
+  if(values.length < period+1) return null;
+  let gains=0, losses=0;
+  for(let i=values.length-period;i<values.length;i++){
+    const diff = values[i]-values[i-1];
+    if(diff>=0) gains+=diff; else losses-=diff;
+  }
+  const avgGain = gains/period, avgLoss = losses/period;
+  if(avgLoss===0) return 100;
+  const rs = avgGain/avgLoss;
+  return 100 - (100/(1+rs));
+}
+
+async function fetchJSON(url){
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  return res.json();
+}
+
+async function fetchClosedKlines(symbol, interval){
+  const url = `https://api.binance.com/api/v3/klines?symbol=${symbol}&interval=${interval}&limit=80`;
+  const data = await fetchJSON(url);
+  const now = Date.now();
+  const closed = data.filter(c => c[6] < now); // closeTime < now
+  return closed;
+}
+
+function analyzeTimeframe(klines){
+  if(!klines || klines.length < 21) return null;
+  const closes = klines.map(c=>parseFloat(c[4]));
+  const vols = klines.map(c=>parseFloat(c[5]));
+  const e20 = ema(closes,20);
+  const e50 = closes.length>=50 ? ema(closes,50) : null;
+  const lastClose = closes[closes.length-1];
+  const lastE20 = e20[e20.length-1];
+  const lastE50 = e50 ? e50[e50.length-1] : null;
+
+  let trend = 'flat';
+  if(lastE50!==null){
+    if(lastClose>lastE20 && lastE20>lastE50) trend='up';
+    else if(lastClose<lastE20 && lastE20<lastE50) trend='down';
+  } else {
+    trend = lastClose>lastE20 ? 'up' : 'down';
+  }
+
+  const r = rsi(closes,14);
+  const lastVol = vols[vols.length-1];
+  const avgVol = vols.slice(-21,-1).reduce((a,b)=>a+b,0)/20;
+  const volRatio = avgVol>0 ? lastVol/avgVol : null;
+
+  return {trend, rsi:r, volRatio, lastClose};
+}
+
+async function fetchFunding(perpSymbol){
+  try{
+    const url = `https://fapi.binance.com/fapi/v1/premiumIndex?symbol=${perpSymbol}`;
+    const data = await fetchJSON(url);
+    return parseFloat(data.lastFundingRate)*100; // as %
+  }catch(e){
+    return null;
+  }
+}
+
+async function fetchTicker(spotSymbol){
+  const url = `https://api.binance.com/api/v3/ticker/24hr?symbol=${spotSymbol}`;
+  const data = await fetchJSON(url);
+  return {price: parseFloat(data.lastPrice), chg24h: parseFloat(data.priceChangePercent)};
+}
+
+function trendBadge(trend){
+  if(trend==='up') return '<span class="tf-badge tf-up">多</span>';
+  if(trend==='down') return '<span class="tf-badge tf-down">空</span>';
+  if(trend==='flat') return '<span class="tf-badge tf-flat">盤</span>';
+  return '<span class="tf-badge tf-na">N/A</span>';
+}
+
+function computeScore(tf, rsi1h, volRatio1h, funding){
+  let score = 0;
+  const notes = [];
+
+  // trend alignment across 4 timeframes
+  const trends = ['4h','1h','15m','5m'].map(k=>tf[k] && tf[k].trend);
+  const upCount = trends.filter(t=>t==='up').length;
+  const downCount = trends.filter(t=>t==='down').length;
+  if(upCount>=3){ score+=1; notes.push('多時間框架偏多對齊'); }
+  if(downCount>=3){ score+=1; notes.push('多時間框架偏空對齊'); }
+
+  if(rsi1h!==null){
+    if(rsi1h>=70){ score+=1; notes.push(`1H RSI超買(${rsi1h.toFixed(0)})`); }
+    if(rsi1h<=30){ score+=1; notes.push(`1H RSI超賣(${rsi1h.toFixed(0)})`); }
+  }
+
+  if(volRatio1h!==null && volRatio1h>=2){
+    score+=1; notes.push(`1H量能放大${volRatio1h.toFixed(1)}x`);
+  }
+
+  if(funding!==null && Math.abs(funding)>=0.03){
+    score+=1; notes.push(`資金費率極端(${funding.toFixed(3)}%)`);
+  }
+
+  return {score, notes};
+}
+
+async function loadCoin(coin){
+  try{
+    const [ticker, funding, k4h, k1h, k15m, k5m] = await Promise.all([
+      fetchTicker(coin.spot),
+      fetchFunding(coin.perp),
+      fetchClosedKlines(coin.spot,'4h'),
+      fetchClosedKlines(coin.spot,'1h'),
+      fetchClosedKlines(coin.spot,'15m'),
+      fetchClosedKlines(coin.spot,'5m'),
+    ]);
+
+    const tf = {
+      '4h': analyzeTimeframe(k4h),
+      '1h': analyzeTimeframe(k1h),
+      '15m': analyzeTimeframe(k15m),
+      '5m': analyzeTimeframe(k5m),
+    };
+
+    const rsi1h = tf['1h'] ? tf['1h'].rsi : null;
+    const volRatio1h = tf['1h'] ? tf['1h'].volRatio : null;
+    const {score, notes} = computeScore(tf, rsi1h, volRatio1h, funding);
+
+    return {
+      symbol: coin.sym, chartSym: coin.perp + '.P', ok:true,
+      price: ticker.price, chg24h: ticker.chg24h,
+      tf, rsi1h, volRatio1h, funding, score, notes,
+    };
+  }catch(e){
+    return {symbol: coin.sym, ok:false, error: e.message};
+  }
+}
+
+async function loadAll(){
+  const btn = document.getElementById('refreshBtn');
+  btn.disabled = true;
+  document.getElementById('statusText').textContent = '更新中...';
+
+  // concurrency-limited batches
+  const batchSize = 5;
+  const results = [];
+  for(let i=0;i<COINS.length;i+=batchSize){
+    const batch = COINS.slice(i,i+batchSize);
+    const batchResults = await Promise.all(batch.map(loadCoin));
+    results.push(...batchResults);
+    renderPartial(results);
+  }
+
+  results.forEach(r=> rows[r.symbol]=r);
+  render();
+  updateTicker();
+
+  const now = new Date();
+  document.getElementById('statusText').textContent =
+    '最後更新 ' + now.toLocaleTimeString('zh-TW',{hour12:false});
+  btn.disabled = false;
+}
+
+function renderPartial(results){
+  document.getElementById('statusText').textContent =
+    `更新中... (${results.length}/${COINS.length})`;
+}
+
+function setFilter(mode){
+  filterMode = mode;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`[data-filter="${mode}"]`).classList.add('active');
+  render();
+}
+
+function sortBy(key){
+  if(sortKey===key) sortDir*=-1; else {sortKey=key; sortDir=-1;}
+  render();
+}
+
+function render(){
+  const tbody = document.getElementById('tbody');
+  let list = Object.values(rows);
+
+  if(filterMode==='watch'){
+    list = list.filter(r=> r.ok && r.score>=2);
+  }
+
+  list.sort((a,b)=>{
+    const getVal = (r,k)=>{
+      if(!r.ok) return -999;
+      if(k==='symbol') return r.symbol;
+      if(k==='price') return r.price;
+      if(k==='chg24h') return r.chg24h;
+      if(k==='rsi1h') return r.rsi1h ?? -999;
+      if(k==='volRatio') return r.volRatio1h ?? -999;
+      if(k==='funding') return r.funding ?? -999;
+      if(k==='score') return r.score;
+      return 0;
+    };
+    const av=getVal(a,sortKey), bv=getVal(b,sortKey);
+    if(typeof av==='string') return av.localeCompare(bv)*sortDir;
+    return (av-bv)*sortDir;
+  });
+
+  tbody.innerHTML = list.map(r=>{
+    if(!r.ok){
+      return `<tr class="err-row"><td>${r.symbol}</td><td colspan="12">讀取失敗 (${r.error}) — 稍後重試</td></tr>`;
+    }
+    const chgClass = r.chg24h>=0 ? 'chg-up' : 'chg-down';
+    const rsiClass = r.rsi1h===null ? '' : (r.rsi1h>=70?'rsi-hot':r.rsi1h<=30?'rsi-cold':'');
+    const scorePct = (r.score/4)*100;
+    const watchTag = r.score>=2 ? '<div class="watch-flag">★ 值得留意</div>' : '';
+
+    return `<tr>
+      <td><div class="coin-cell"><span class="coin-sym">${r.symbol}</span></div></td>
+      <td class="price">${formatPrice(r.price)}</td>
+      <td class="${chgClass}">${r.chg24h>=0?'+':''}${r.chg24h.toFixed(2)}%</td>
+      <td>${trendBadge(r.tf['4h']?.trend)}</td>
+      <td>${trendBadge(r.tf['1h']?.trend)}</td>
+      <td>${trendBadge(r.tf['15m']?.trend)}</td>
+      <td>${trendBadge(r.tf['5m']?.trend)}</td>
+      <td class="rsi-val ${rsiClass}">${r.rsi1h!==null?r.rsi1h.toFixed(0):'N/A'}</td>
+      <td>${r.volRatio1h!==null?r.volRatio1h.toFixed(1)+'x':'N/A'}</td>
+      <td>${r.funding!==null?r.funding.toFixed(3)+'%':'N/A'}</td>
+      <td><span class="score-bar-wrap"><span class="score-bar" style="width:${scorePct}%"></span></span>${r.score}/4</td>
+      <td class="note">${watchTag}${r.notes.join('、')||'—'}</td>
+      <td><a href="https://www.tradingview.com/chart/?symbol=BINANCE%3A${r.chartSym}" target="_blank" rel="noopener" style="color:var(--amber); text-decoration:none; font-size:11px; border:1px solid var(--amber-dim); padding:3px 8px; border-radius:4px;">開圖表 ↗</a></td>
+    </tr>`;
+  }).join('');
+}
+
+function formatPrice(p){
+  if(p>=1000) return p.toLocaleString('en-US',{maximumFractionDigits:2});
+  if(p>=1) return p.toFixed(3);
+  if(p>=0.01) return p.toFixed(5);
+  return p.toFixed(8);
+}
+
+function updateTicker(){
+  const list = Object.values(rows).filter(r=>r.ok);
+  const doubled = [...list, ...list];
+  document.getElementById('tickerStrip').innerHTML = doubled.map(r=>{
+    const cls = r.chg24h>=0?'chg-up':'chg-down';
+    return `<span>${r.symbol} <span class="${cls}">${r.chg24h>=0?'+':''}${r.chg24h.toFixed(2)}%</span></span>`;
+  }).join('');
+}
+
+loadAll();
+</script>
+</body>
+</html>
