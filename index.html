@@ -442,7 +442,7 @@ function render(){
       <td>${r.funding!==null?r.funding.toFixed(3)+'%':'N/A'}</td>
       <td><span class="score-bar-wrap"><span class="score-bar" style="width:${scorePct}%"></span></span>${r.score}/4</td>
       <td class="note">${watchTag}${r.notes.join('、')||'—'}</td>
-      <td><a href="https://www.tradingview.com/chart/?symbol=BINANCE%3A${r.chartSym}" target="_blank" rel="noopener" style="color:var(--amber); text-decoration:none; font-size:11px; border:1px solid var(--amber-dim); padding:3px 8px; border-radius:4px;">開圖表 ↗</a></td>
+      <td><a href="https://www.tradingview.com/chart/?symbol=BINANCE%3A${r.chartSym}" onclick="return openChart(this.href);" rel="noopener" style="color:var(--amber); text-decoration:none; font-size:11px; border:1px solid var(--amber-dim); padding:3px 8px; border-radius:4px;">開圖表 ↗</a></td>
     </tr>`;
   }).join('');
 }
@@ -461,6 +461,13 @@ function updateTicker(){
     const cls = r.chg24h>=0?'chg-up':'chg-down';
     return `<span>${r.symbol} <span class="${cls}">${r.chg24h>=0?'+':''}${r.chg24h.toFixed(2)}%</span></span>`;
   }).join('');
+}
+
+function openChart(url){
+  // 強制開全新的瀏覽器情境（而非在 PWA 容器內導頁），
+  // 讓手機系統有機會判斷是否要轉交給已安裝的 TradingView App。
+  window.open(url, '_blank', 'noopener');
+  return false;
 }
 
 loadAll();
